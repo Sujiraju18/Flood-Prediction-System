@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flood Prediction System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>🌊 Flood Prediction System</h1>
+
+        <p class="subtitle">
+            Machine Learning Based Flood Risk Prediction
+        </p>
+
+        <form action="/predict" method="POST">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Monsoon Intensity</label>
+                    <input type="number" name="MonsoonIntensity" min="0" max="10" step="1"
+            placeholder="Enter value (0-10)"required>
+                </div>
+
+                <div class="form-group">
+                    <label>Topography Drainage</label>
+                    <input type="number" name="TopographyDrainage" min="0" max="10"step="1" placeholder="Enter value (0-10)" required>
+                </div>
+
+                <div class="form-group">
+                    <label>River Management</label>
+                    <input type="number" name="RiverManagement" min="0" max="10"step="1" placeholder="Enter value (0-10)" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Deforestation</label>
+                    <input type="number" name="Deforestation" min="0" max="10" step="1" placeholder="Enter value (0-10)"required>
+                </div>
+
+                <div class="form-group">
+                    <label>Urbanization</label>
+                    <input type="number" name="Urbanization" min="0" max="10" step="1"
+    placeholder="Enter value (0-10)" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Climate Change</label>
+                    <input type="number" name="ClimateChange" min="0" max="10" step="1"
+    placeholder="Enter value (0-10)" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Dams Quality</label>
+                    <input type="number" name="DamsQuality" min="0" max="10" step="1"
+    placeholder="Enter value (0-10)" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Siltation</label>
+                    <input type="number" name="Siltation" min="0" max="10" step="1"
+    placeholder="Enter value (0-10)" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Agricultural Practices</label>
+                    <input type="number" name="AgriculturalPractices" min="0" max="10" step="1"
+    placeholder="Enter value (0-10)" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Encroachments</label>
+                    <input type="number" name="Encroachments" min="0" max="10" step="1"
+    placeholder="Enter value (0-10)" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Ineffective Disaster Preparedness</label>
+                    <input type="number" name="IneffectiveDisasterPreparedness" min="0" max="10" step="1"
+    placeholder="Enter value (0-10)" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Drainage Systems</label>
+                    <input type="number" name="DrainageSystems" min="0" max="10" step="1"
+    placeholder="Enter value (0-10)" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Coastal Vulnerability</label>
+                    <input type="number" name="CoastalVulnerability" min="0" max="10" step="1"
+    placeholder="Enter value (0-10)" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Landslides</label>
+                    <input type="number" name="Landslides" min="0" max="10" step="1"
+    placeholder="Enter value (0-10)" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Watersheds</label>
+                    <input type="number" name="Watersheds" min="0" max="10" step="1"
+    placeholder="Enter value (0-10)" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Deteriorating Infrastructure</label>
+                    <input type="number" name="DeterioratingInfrastructure" min="0" max="10" step="1"
+    placeholder="Enter value (0-10)" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Population Score</label>
+                    <input type="number" name="PopulationScore" min="0" max="10" step="1"
+    placeholder="Enter value (0-10)"required>
+                </div>
+
+                <div class="form-group">
+                    <label>Wetland Loss</label>
+                    <input type="number" name="WetlandLoss" min="0" max="10" step="1"
+    placeholder="Enter value (0-10)" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Inadequate Planning</label>
+                    <input type="number" name="InadequatePlanning" min="0" max="10" step="1"
+    placeholder="Enter value (0-10)" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Political Factors</label>
+                    <input type="number" name="PoliticalFactors" min="0" max="10" step="1"
+    placeholder="Enter value (0-10)" required>
+                </div>
+
+            </div>
+
+            <button type="submit">
+                Predict Flood Risk
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
