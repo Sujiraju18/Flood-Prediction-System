@@ -16,8 +16,8 @@ def home():
 
 @app.route("/predict", methods=["POST"])
 def predict():
-
-    features = [
+    
+        features = [
         float(request.form["MonsoonIntensity"]),
         float(request.form["TopographyDrainage"]),
         float(request.form["RiverManagement"]),
@@ -41,15 +41,17 @@ def predict():
     ]
 
     features = np.array(features).reshape(1, -1)
+
     features = scaler.transform(features)
+   
 
     prediction = model.predict(features)
-
+    
+    
     if prediction[0] == 1:
-        result = "⚠ High Flood Risk"
+        result = "High Flood Risk"
     else:
-        result = "✅ Low Flood Risk"
-
+        result = "Low Flood Risk"
     return render_template("result.html", prediction=result)
 
 
